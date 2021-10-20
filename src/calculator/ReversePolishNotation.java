@@ -27,11 +27,11 @@ public class ReversePolishNotation {
                 output.add(value);
             }
             //If we have in our expression operator, do this case
-            //Если больше 2-х знаков, это ошибка, поэтому проверяю value.length() <= 2
+          
             else if (operators.contains(value) && value.length() <= 2) {
                 //peek() - check who was last in stack
 
-                //Если оператор из стека меньше оператора значения, пушим
+             
                 if (stackOp.isEmpty() || getPriority(stackOp.peek()) < getPriority(value)) {
                     stackOp.push(value);
                 } else if (getPriority(stackOp.peek()) == getPriority(value)) {
